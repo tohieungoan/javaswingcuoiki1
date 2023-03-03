@@ -33,7 +33,8 @@ public class ghivaodb {
         con.close();
      }
      else 
-       // System.out.println(sql+id+name+namsinh+monvipham+phongthivipham+loivipham+noidung);
+      //  System.out.println(sql+id+name+namsinh+monvipham+phongthivipham+loivipham+noidung);
+
      sm.executeUpdate(sql+id+name+namsinh+monvipham+phongthivipham+loivipham+noidung);
         con.close();
     } catch (SQLException e) {

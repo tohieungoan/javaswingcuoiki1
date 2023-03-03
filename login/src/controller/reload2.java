@@ -34,28 +34,31 @@ public class reload2 {
     String diemuutiens = "";
     String gt = "";
     {
-    if(selectchoose.tenst.equals("giam dan")){
+    if(selectchoose.tenst.equals("giảm dần")){
         tens =" order by ten desc ";
     }
-    else if(selectchoose.tenst.equals("tang dan")){
+    if(selectchoose.tenst.equals("tất cả")){
+        tens = " order by gioitinh asc ";
+    }
+    else if(selectchoose.tenst.equals("tăng dần")){
         tens =" order by ten asc ";
     }
 }{
-    if(selectchoose.lopst.equals("tat ca")){
-        if(selectchoose.gt.equals("tat ca")){
+    if(selectchoose.lopst.equals("tất cả")){
+        if(selectchoose.gt.equals("tất cả")){
             gt = "";
     }
     else if (selectchoose.gt.equals("nam")){
                 gt = "where gioitinh = true"; 
     }
-    else  if (selectchoose.gt.equals("nu")){
+    else  if (selectchoose.gt.equals("nữ")){
         gt = "where gioitinh = false"; 
     }
     tenlops = "" + gt;
 }
 
     else {   
-        if(selectchoose.gt.equals("tat ca")){
+        if(selectchoose.gt.equals("tất cả")){
         gt = "";
 }
 else if (selectchoose.gt.equals("nam")){
@@ -68,14 +71,14 @@ gt = "and gioitinh = false";
 }
 }
 {
-    if(selectchoose.diemuutienst.equals("tat ca")){
+    if(selectchoose.diemuutienst.equals("tất cả")){
         diemuutiens = "";
         
     }
-    else if(selectchoose.diemuutienst.equals("giam dan")){
+    else if(selectchoose.diemuutienst.equals("giảm dần")){
         diemuutiens =" , diemuutien desc ;";
     }
-    else if(selectchoose.diemuutienst.equals("tang dan")){
+    else if(selectchoose.diemuutienst.equals("tăng dần")){
         diemuutiens =", diemuutien asc ;";
 
     }

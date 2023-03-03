@@ -42,30 +42,30 @@ String toans, String tienganhs){
  JPanel cont = new JPanel();
  cont.setBackground(new java.awt.Color(185, 245, 245) );
  cont.setLayout(new GridLayout(7,2));
- idhs = new JLabel("ID hoc sinh");
+ idhs = new JLabel("ID học sinh");
  idhs.setForeground(Color.black);
  idhstf = new JTextField(id);
  idhstf.setEditable(false);
  idhstf.setForeground(Color.black);
- namehs = new JLabel("Ho va ten");
+ namehs = new JLabel("Họ và tên");
  namehs.setForeground(Color.black);
   namehstf = new JTextField(ten);
   namehstf.setEditable(false);
   namehstf.setForeground(Color.black);
-  ngaysinh = new JLabel("Ngay sinh");
+  ngaysinh = new JLabel("Ngày sinh");
   ngaysinh.setForeground(Color.black);
   ngaysinhtf = new JTextField(tuoi);
   ngaysinhtf.setEditable(false);
   ngaysinhtf.setForeground(Color.black);
-  nguv = new JLabel("diem ngu van");
+  nguv = new JLabel("điểm ngữ văn");
   nguv.setForeground(Color.black);
   nguvan = new JTextField(nguvans);
   nguvan.setForeground(Color.black);
-  toanv = new JLabel("diem toan");
+  toanv = new JLabel("điểm toán");
   toanv.setForeground(Color.black);
   toan = new JTextField(toans);
    toan.setForeground(Color.black);
-   tienga = new JLabel("diem tieng anh");
+   tienga = new JLabel("điểm tiếng anh");
    tienga.setForeground(Color.black);
    tienganh = new JTextField(tienganhs);
    tienganh.setForeground(Color.black);
@@ -114,7 +114,7 @@ con.setLayout(new BorderLayout());
 JPanel jp = new JPanel();
 jp.setBackground(new java.awt.Color(185, 245, 245) );
 jp.setLayout(new GridLayout());
-JLabel reg = new JLabel("Thong tin hoc sinh");
+JLabel reg = new JLabel("Thông tin học sinh");
 reg.setFont(new Font("Times New Roman" , Font.BOLD | Font.PLAIN, 24));
 ImageIcon iscon = new ImageIcon("D:\\doanjavacuoiky1\\login\\src\\icon\\Student-3-icon.png");
 JLabel iconreg = new JLabel(iscon);
@@ -136,15 +136,15 @@ ediths.setVisible(true);
         }
         else if(e.getActionCommand().equals("OK")){
             if(idhstf.getText().equals("")||namehstf.getText().equals("")||ngaysinhtf.getText().equals("")||nguvan.getText().equals("")||toan.getText().equals("")||tienganh.getText().equals("")){
-              JOptionPane.showMessageDialog(rootPane, "Thong tin khong duoc rong.","Edit student error",
+              JOptionPane.showMessageDialog(rootPane, "Thông tin không được rỗng.","Edit student error",
               JOptionPane.ERROR_MESSAGE);
 
             }
             else{
                 try{
-                    Double a = Double.parseDouble(nguvan.getText());
-                    Double b = Double.parseDouble(toan.getText());
-                    Double c = Double.parseDouble(tienganh.getText());
+                     a = Double.parseDouble(nguvan.getText());
+                     b = Double.parseDouble(toan.getText());
+                     c = Double.parseDouble(tienganh.getText());
                     
              if(a<0||a>10||b<0||b>10||c<0||c>10){
                 JOptionPane.showMessageDialog(rootPane, "điểm nằm ngoài vùng cho phép !!","enter error",

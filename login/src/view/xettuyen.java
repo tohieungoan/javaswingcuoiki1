@@ -71,7 +71,8 @@ public class xettuyen extends JFrame implements ActionListener {
             JOptionPane.ERROR_MESSAGE);
            }
       }
-      else{ new thongtinhs();
+      else{
+         new thongtinhs();
         jf.setVisible(false);
       } 
     }

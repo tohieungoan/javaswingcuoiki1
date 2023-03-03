@@ -24,7 +24,7 @@ public class addhscontrol extends JFrame{
        if(check.equals("1")){
         JOptionPane.showMessageDialog(rootPane, "đã tồn tại học sinh mang id này !!","enter error",
         JOptionPane.ERROR_MESSAGE);
-        new addhs("them hoc sinh","", "", "", 0.0, "", "", "");
+        new addhs("thêm học sinh","", "", "", 0.0, "", "", "");
        }
        else { 
         String sql = "insert into student values";

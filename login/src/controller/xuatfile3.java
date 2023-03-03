@@ -38,11 +38,11 @@ public class xuatfile3 {
             cell = row.createCell(3, CellType.STRING);
             cell.setCellValue("Ngày sinh");
             cell = row.createCell(4, CellType.STRING);
-            cell.setCellValue("Diem ngữ văn");
+            cell.setCellValue("Điểm ngữ văn");
             cell = row.createCell(5, CellType.STRING);
-            cell.setCellValue("Diem toan");
+            cell.setCellValue("Điểm toán");
             cell = row.createCell(6, CellType.STRING);
-            cell.setCellValue("Diem tieng anh");
+            cell.setCellValue("Điểm tiếng anh");
             thongtinhs.vTitle.clear();
             thongtinhs.vData.clear();
     new reload3();

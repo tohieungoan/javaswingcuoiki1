@@ -13,8 +13,8 @@ public logincontrol (){
     }
     else {
     new login();
- //   new errorlogin();
-    JOptionPane.showMessageDialog(rootPane, "Sai tai khoan hoac mat khau.","Login error",
+
+    JOptionPane.showMessageDialog(rootPane, "Sai tài khoản hoặc mật khẩu.","Login error",
     JOptionPane.ERROR_MESSAGE);
     }
 }

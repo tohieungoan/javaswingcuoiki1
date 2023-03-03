@@ -9,7 +9,7 @@ public class Moreview extends JFrame implements ActionListener {
         Font font = new Font("Times New Roman", Font.BOLD , 14 );
         cont = this.getContentPane();
         cont.setLayout(null);
-        JLabel ttll = new JLabel("Thong tin ung dung");
+        JLabel ttll = new JLabel("Thông tin ứng dụng");
         ttll.setFont(new Font("Times New Roman", Font.BOLD, 20));
         cont.add(ttll);
         ttll.setBounds(170, -40, 300, 100);
@@ -18,13 +18,13 @@ ImageIcon iscon = new ImageIcon("D:\\doanjavacuoiky1\\login\\src\\icon\\logo.png
  JLabel label = new JLabel(iscon);
 cont.add(label);
 label.setBounds(0, 30, 159, 159);
-JLabel ten = new JLabel("Ten : Mo hinh quan li tuyen sinh 10");
+JLabel ten = new JLabel("Tên : Mô hình quản lí tuyển sinh lớp 10");
 ten.setFont(font);
-JLabel thongtin = new JLabel("Thong tin : Do an cuoi ki mon java ") ;
- JLabel thongtinn = new JLabel("cua To Hieu Ngoan.");
+JLabel thongtin = new JLabel("Thông tin : Đồ án cuối kì môn java ") ;
+ JLabel thongtinn = new JLabel("của Tô Hiếu Ngoan.");
 thongtin.setFont(font);
 thongtinn.setFont(font);
-JLabel phienban = new JLabel("phien ban : 1.0");
+JLabel phienban = new JLabel("mã sv : 22IT183");
 phienban.setFont(font);
 JLabel ngaylam = new JLabel("Ngay bat dau lam : 26/12/2022");
 ngaylam.setFont(font);
@@ -34,12 +34,12 @@ cont.add(ngaylam);
 cont.add(thongtin);
 cont.add(thongtinn);
 ten.setBounds(170, 0, 300, 100);
-phienban.setBounds(170, 20, 200, 100);
-ngaylam.setBounds(170, 40, 400, 100);
-thongtin.setBounds(170, 60, 500, 100);
-thongtinn.setBounds(240, 80, 500, 100);
+phienban.setBounds(170, 30, 200, 100);
+ngaylam.setBounds(170, 60, 400, 100);
+thongtin.setBounds(170, 90, 500, 100);
+thongtinn.setBounds(240, 120, 500, 100);
 Icon icon = new ImageIcon("D:\\doanjavacuoiky1\\login\\src\\icon\\Undo-icon.png");
- undoo = new JButton("tro lai");
+ undoo = new JButton("trở lại");
  undoo.setIcon(icon);
  undoo.setSize(50, 100);
  undoo.addActionListener(this);
@@ -57,7 +57,7 @@ Icon icon = new ImageIcon("D:\\doanjavacuoiky1\\login\\src\\icon\\Undo-icon.png"
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getActionCommand().equals("tro lai")){
+        if(e.getActionCommand().equals("trở lại")){
      this.setVisible(false);
     }
 }

@@ -60,7 +60,7 @@ public void createwindowadmin () {
   window.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
   window.setLayout(null);
   window.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\doanjavacuoiky1\\login\\src\\icon\\School-icon.png"));
-  window.setTitle("giao dien danh cho Admin");
+  window.setTitle("giao diện dành cho Admin");
   ImageIcon img = new ImageIcon(Toolkit.getDefaultToolkit().getImage("D:\\doanjavacuoiky1\\login\\src\\icon\\anime.jpg"));
  bg = new JLabel("",img,JLabel.CENTER);
  bg.setBounds(0, 0, 1050, 700);
@@ -86,7 +86,7 @@ public void createwindowadmin () {
  jl3.setBounds(10, 70,500, 60);
  window.add(jl3);
 
- JLabel jl4 = new JLabel("Thêm tài khoản giáo : alt + A");
+ JLabel jl4 = new JLabel("Thêm tài khoản giáo viên : alt + A");
  jl4.setFont(new Font("Times new Roman", Font.BOLD , 15));
  jl4.setForeground(Color.white);
  jl4.setBounds(10, 90, 300, 60);
@@ -153,15 +153,15 @@ public void createwindowadmin2(){
   ImageIcon img = new ImageIcon(Toolkit.getDefaultToolkit().getImage("D:\\doanjavacuoiky1\\login\\src\\icon\\justcolor.png"));
   bg = new JLabel("",img,JLabel.CENTER);
   bg.setBounds(0, 0, 1050, 700);
-  remove = new JButton("xoa hoc sinh");
+  remove = new JButton("xóa học sinh");
   remove.addActionListener(this);
-  undoo = new JButton("tro lai");
+  undoo = new JButton("trở lại");
   undoo.addActionListener(this);
   xuat = new JButton("In ra ds");
   xuat.addActionListener(this);
-  chinhsua = new JButton("chinh sua");
+  chinhsua = new JButton("chỉnh sửa");
   chinhsua.addActionListener(this);
-  sapxep = new JButton("sap xep");
+  sapxep = new JButton("sắp xếp");
   sapxep.addActionListener(this);
   undoo.setBackground(new java.awt.Color(125, 255, 255));
   chinhsua.setBackground(new java.awt.Color(125, 255, 255));
@@ -188,13 +188,14 @@ public void createwindowadmin2(){
   window.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
   window.getContentPane().add(tableResult,"North");
   window.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\doanjavacuoiky1\\login\\src\\icon\\School-icon.png"));
-  window.setTitle("Chinh sua thong tin hoc sinh");
+  window.setTitle("Chỉnh sửa thông tin học sinh");
   window.add(bg);
   window.setSize(1000, 680);
   window.setResizable(false);
   window.setLocationRelativeTo(null);
   window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   window.setVisible(true);
+
 }
 public void menu (){
   menu=new JMenuBar(){
@@ -210,31 +211,33 @@ public void menu (){
    };
     menu.setBorder(null);
     window.setJMenuBar(menu);
-    hethong = new JMenu("He thong");
+    hethong = new JMenu("Hệ thống");
     hethong.setForeground(Color.white);
     hethong.addActionListener(this);
-    quanli = new JMenu("Quan li hoc sinh");
+    quanli = new JMenu("Quản lí học sinh");
     quanli.setForeground(Color.white);
-    taikhoan = new JMenu("tai khoan");
+    taikhoan = new JMenu("tài khoản");
     taikhoan.setForeground(Color.white);
     timkiem = new JMenu("Search");
     timkiem.setForeground(Color.white);
-    trogiup = new JMenu("Tro giup");
+    trogiup = new JMenu("Trợ giúp");
     trogiup.setForeground(Color.white);
-JMenu homthu = new JMenu("Hom thu");
+JMenu homthu = new JMenu("Hòm thư");
 
  homthu.setBackground(new java.awt.Color (8,45,85));
     homthu.setForeground(Color.white);
     new checkletter();
+    // kiểm tra nếu có thư
      if(letter!=0){
       homthu.setIcon(new ImageIcon("D:\\doanjavacuoiky1\\login\\src\\icon\\mail1.png"));
+      //set icon thư màu 
       new addthu();
       for(int i =0 ; i<addthu.list.size();i++){
         JMenuItem it = new JMenuItem(" "+addthu.list.get(i));
         it.addActionListener(this);
         homthu.add(it);
         homthu.addSeparator();
-       // System.out.println(addthu.list.get(i));
+  //xem mỗi bức thư như 1 jmenuitem
       }
     }
     else if(letter==0){
@@ -254,19 +257,19 @@ JMenu homthu = new JMenu("Hom thu");
   // JMenuItem jm = new JMenuItem();
   // homthu.add(jm);
   
- dangxuat = new JMenuItem("dang xuat", KeyEvent.VK_L);
+ dangxuat = new JMenuItem("đăng xuất", KeyEvent.VK_L);
 dangxuat.addActionListener(this);
 dangxuat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L,InputEvent.CTRL_DOWN_MASK));
- thoat = new JMenuItem("thoat" , KeyEvent.VK_X);
+ thoat = new JMenuItem("thoát" , KeyEvent.VK_X);
 thoat.addActionListener(this);
 thoat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X,InputEvent.CTRL_DOWN_MASK));
-themsinhvien = new JMenuItem("them hoc sinh" , KeyEvent.VK_A);
+themsinhvien = new JMenuItem("thêm học sinh" , KeyEvent.VK_A);
 themsinhvien.addActionListener(this);
 themsinhvien.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,InputEvent.CTRL_DOWN_MASK));
-thongke = new JMenuItem("thong ke" , KeyEvent.VK_R);
+thongke = new JMenuItem("thống kê" , KeyEvent.VK_R);
 thongke.addActionListener(this);
 thongke.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R,InputEvent.CTRL_DOWN_MASK));
- chinhsuatt = new JMenuItem("chinh sua thong tin hoc sinh", KeyEvent.VK_E);
+ chinhsuatt = new JMenuItem("chỉnh sửa thông tin học sinh", KeyEvent.VK_E);
 chinhsuatt.addActionListener(this);
 chinhsuatt.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_E,InputEvent.CTRL_DOWN_MASK));
  help = new JMenuItem("Help" , KeyEvent.VK_H);
@@ -275,23 +278,23 @@ help.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_H,InputEvent.CTRL_DOWN_MA
  more = new JMenuItem("More" , KeyEvent.VK_M);
 more.addActionListener(this);
 more.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M,InputEvent.CTRL_DOWN_MASK));
- themtk = new JMenuItem("Them tai khoan giao vien" , KeyEvent.VK_A);
+ themtk = new JMenuItem("Thêm tài khoản giáo viên" , KeyEvent.VK_A);
 themtk.addActionListener(this);
 themtk.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,InputEvent.ALT_DOWN_MASK));
- xoatk = new JMenuItem("Xoa tai khoan giao vien", KeyEvent.VK_R);
+ xoatk = new JMenuItem("Xóa tài khoản giáo viên", KeyEvent.VK_R);
 xoatk.addActionListener(this);
 xoatk.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R,InputEvent.ALT_DOWN_MASK));
-timkimgiaovien = new JMenuItem("Tim kiem giao vien", KeyEvent.VK_F);
+timkimgiaovien = new JMenuItem("Tìm kiếm giáo viên", KeyEvent.VK_F);
  timkimgiaovien.addActionListener(this);
  timkimgiaovien.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F , InputEvent.ALT_DOWN_MASK));
- timkiemhs = new JMenuItem("Tim kiem hoc sinh", KeyEvent.VK_S);
+ timkiemhs = new JMenuItem("Tìm kiếm học sinh", KeyEvent.VK_S);
  timkiemhs.addActionListener(this);
  timkiemhs.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,InputEvent.ALT_DOWN_MASK));
 
 //  JMenuItem jj = new JMenuItem("dasd");
 //  homthu.add(jj);
 
- print = new JMenuItem("xuat file" , KeyEvent.VK_P);
+ print = new JMenuItem("xuất file" , KeyEvent.VK_P);
 print.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P,InputEvent.CTRL_DOWN_MASK));
 print.setIcon(new ImageIcon("D:\\doanjavacuoiky1\\login\\src\\icon\\print-icon.png"));
 print.addActionListener(this);
@@ -330,11 +333,11 @@ timkiem.add(timkiemhs);
 public void actionPerformed(ActionEvent e) {
 
    button = e.getActionCommand();
-  if(button.equals("dang xuat")){
+  if(button.equals("đăng xuất")){
     window.setVisible(false);
     new login();
   }
-  else if(button.equals("thoat")){
+  else if(button.equals("thoát")){
     System.exit(0);
   }
   else if (button.equals("Help")){
@@ -343,59 +346,59 @@ public void actionPerformed(ActionEvent e) {
   else if (button.equals("More")){
     new Moreview();
   }
-  else if (button.equals("xuat file")){
+  else if (button.equals("xuất file")){
     new nhapnamefile();
   }
-  else if(button.equals("thoat")){
+  else if(button.equals("thoát")){
     System.exit(0);
   }
-  else if (button.equals("Them tai khoan giao vien")){
+  else if (button.equals("Thêm tài khoản giáo viên")){
     new Addteachers("" , "" , "" , "", 
     "" , "" );
   }
-  else if(button.equals("Xoa tai khoan giao vien")){
+  else if(button.equals("Xóa tài khoản giáo viên")){
     new removetc();
   }
-  else if (button.equals("Tim kiem giao vien")){
+  else if (button.equals("Tìm kiếm giáo viên")){
     new nhapidtk();
   }
-  else if (button.equals("Tim kiem hoc sinh")){
+  else if (button.equals("Tìm kiếm học sinh")){
     new nhapidtkhs();
   }
-  else if (button.equals("them hoc sinh")){
+  else if (button.equals("thêm học sinh")){
    if(cuaso==1){ window.setVisible(false);
    }
-    new addhs("them hoc sinh","", "", "", 0.0, "", "", "");
+    new addhs("thêm học sinh","", "", "", 0.0, "", "", "");
     
   }
-  else if(button.equals("chinh sua thong tin hoc sinh")){
+  else if(button.equals("chỉnh sửa thông tin học sinh")){
 window.setVisible(false);
          viewAdmin.cuaso = 1;
          new viewAdmin();
     
   }
-  else if(cuaso==1&&button.equals("tro lai")){
+  else if(cuaso==1&&button.equals("trở lại")){
 cuaso =0;
 window.setVisible(false);
 new viewAdmin();
   }
-  else if (cuaso==1&&button.equals("xoa hoc sinh")){
+  else if (cuaso==1&&button.equals("xóa học sinh")){
     new deletehs();
     new reload2();
   }
-  else if(cuaso==1&&button.equals("chinh sua")){
+  else if(cuaso==1&&button.equals("chỉnh sửa")){
     Vector st = (Vector)vData.elementAt(selectedrow);
    chinhsuav =2;
-    new addhs("chinh sua thong tin hoc sinh",(String)st.elementAt(0), (String)st.elementAt(1),(String)st.elementAt(2),  0.0, "", "", "");
+    new addhs("chỉnh sửa thông tin học sinh",(String)st.elementAt(0), (String)st.elementAt(1),(String)st.elementAt(2),  0.0, "", "", "");
   }
-  else if (cuaso==1&&button.equals("sap xep")){
+  else if (cuaso==1&&button.equals("sắp xếp")){
     window.setVisible(false);
     new selectchoose();
   }
   else if(cuaso==1&&button.equals("In ra ds")){
     new nhapnamefile();
   }
-  else if(button.equals("thong ke")){
+  else if(button.equals("thống kê")){
     new bieudo();
   }
   else {

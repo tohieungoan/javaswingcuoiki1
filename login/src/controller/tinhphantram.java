@@ -9,7 +9,7 @@ public class tinhphantram  {
         dao db = new dao();
         Connection con = db.getConnect();
  Statement stm = con.createStatement();
-      String sql = "select s.diemvan , s.diemtoan , s.diemtienganh  from diemthi s inner join student v on s.id = v.id;;"; 
+      String sql = "select s.diemvan , s.diemtoan , s.diemtienganh  from diemthi s inner join student v on s.id = v.id;"; 
       ResultSet rst =  stm.executeQuery(sql);
       while(rst.next()){
         if(rst.getString(1).equals("null")||rst.getString(2).equals("null")||rst.getString(3).equals("null")){

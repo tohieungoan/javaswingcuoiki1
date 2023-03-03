@@ -16,6 +16,7 @@ public class login extends JFrame implements ActionListener {
     public static  String pa="";
     public login(){
          jf = new JFrame();
+         jf.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\doanjavacuoiky1\\login\\src\\icon\\vku.jpg"));
         jf.setUndecorated(true);
         jf.setSize(800, 500);
         jf.setLayout(null);
@@ -68,6 +69,7 @@ public class login extends JFrame implements ActionListener {
         select.setForeground(Color.white);
         select.setBackground(new java.awt.Color(26 ,19, 19));
         select.setBounds(320, 0, 80, 30);
+        select.setBorder(BorderFactory.createLineBorder(new java.awt.Color(169, 224, 49)));
         JLabel text1 = new JLabel("Tài khoản");
         JLabel text2 = new JLabel("Mật khẩu");
         text1.setForeground(new java.awt.Color(169, 224, 49));

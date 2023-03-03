@@ -1,5 +1,4 @@
 package view;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -30,39 +29,40 @@ jp = new Container();
 jp.setBackground(Color.white);
 jp.setLayout(null);
 Icon iscon = new ImageIcon("D:\\doanjavacuoiky1\\login\\src\\icon\\search.png");
-JLabel search = new JLabel(iscon); sea = new JTextField();
-tim = new JButton("tim kiem");
+JLabel search = new JLabel(iscon);
+ sea = new JTextField();
+tim = new JButton("Tìm kiếm");
 tim.addActionListener(this);
 tim.setBackground(Color.white);
-tim.setFont(new Font("Times new Roman" , Font.BOLD , 19));
+tim.setFont(new Font("Times new Roman" , Font.BOLD , 17));
 tim.setBounds(470,40,110,50);
 sea.setBounds(70, 40, 400, 50);
 search.setBounds(0, 30, 64, 64);
-rp = new JButton("Report");
+rp = new JButton("Phúc khảo");
 rp.addActionListener(this);
 rp.setBackground(Color.white);
 rp.setBounds(480, 300, 100, 60);
-rp.setFont(new Font("Times new Roman" , Font.BOLD , 19));
+rp.setFont(new Font("Times new Roman" , Font.BOLD , 14));
 Icon icon = new ImageIcon("D:\\doanjavacuoiky1\\login\\src\\icon\\Undo-icon.png");
  undoo = new JButton(" ");
  undoo.setIcon(icon);
  undoo.setBackground(Color.white);
  undoo.setBounds(0, 300, 100, 60);
 undoo.addActionListener(this);
-  lb = new JLabel("Xem ket qua thi");
+  lb = new JLabel("Xem kết quả thi");
  lb.setFont(new Font("Times new Roman" , Font.BOLD | Font.ITALIC , 26));
  lb.setForeground(Color.RED);
  lb.setBounds(200, -10, 300, 60);
- kqtc = new JLabel("ket qua :");
+ kqtc = new JLabel("kết quả :");
  kqtc.setFont(new Font("Times new Roman", Font.BOLD | Font.ITALIC , 16));
  kqtc.setBounds(50, 100, 500, 70);
- tracuu = new JLabel("id : "+ id +", ten : "+name);
+ tracuu = new JLabel("id : "+ id +", tên : "+name);
  tracuu.setFont(new Font("Times new Roman", Font.BOLD | Font.ITALIC , 18));
  tracuu.setBounds(50, 140, 500, 70);
- tracuudiemut = new JLabel("ngay sinh : "+tuoi +" , diem uu tien : "+ diemuutien );
+ tracuudiemut = new JLabel("ngày sinh : "+tuoi +" , điểm ưu tiên : "+ diemuutien );
  tracuudiemut.setFont(new Font("Times new Roman", Font.BOLD | Font.ITALIC , 18));
  tracuudiemut.setBounds(50, 170, 500, 70);
- tracuudiem = new JLabel("diem van : "+diemvan + ", diem toan : "+diemtoan +", diem tieng anh : "+ diemtienganh);
+ tracuudiem = new JLabel("điểm văn : "+diemvan + ", điểm toán : "+diemtoan +", điểm tiếng anh : "+ diemtienganh);
  tracuudiem.setFont(new Font("Times new Roman", Font.BOLD | Font.ITALIC , 18));
  tracuudiem.setBounds(50, 200, 500, 70);
  if(dieuhuong==0){
@@ -98,16 +98,17 @@ this.setResizable(false);
 this.add(jp);
 this.setUndecorated(true);
 this.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
+this.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\doanjavacuoiky1\\login\\src\\icon\\vs.png"));
 this.setVisible(true);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
-        if(e.getActionCommand().equals("Report")){
+        if(e.getActionCommand().equals("Phúc khảo")){
             new phuckhao();
         }
-        else if  (e.getActionCommand().equals("tim kiem")){
+        else if  (e.getActionCommand().equals("Tìm kiếm")){
             id = sea.getText();
             this.setVisible(false);
             new tracuu();

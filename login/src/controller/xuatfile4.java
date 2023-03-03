@@ -17,14 +17,14 @@ public class xuatfile4 {
         System.out.println(nhapnamefile2.namefile);
         try {
                 XSSFWorkbook workbook = new XSSFWorkbook();
-                XSSFSheet spreadsheet = workbook.createSheet("Học đậu tuyển sinh");
+                XSSFSheet spreadsheet = workbook.createSheet("Học sinh đậu tuyển sinh");
                
                 XSSFRow row = null;
                 Cell cell = null;
                 row = spreadsheet.createRow((short) 2);
                 row.setHeight((short) 500);
                 cell = row.createCell(0, CellType.STRING);
-                cell.setCellValue("Danh sach vi pham");
+                cell.setCellValue("Danh sách vi phạm");
         
                 row = spreadsheet.createRow((short) 3);
                 row.setHeight((short) 500);

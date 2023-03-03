@@ -2,9 +2,7 @@ package controller;
 import java.sql.*;
 import view.*;
 import DAO.*;
-import java.util.*;
 import javax.swing.*;
-import java.awt.*;
 public class tracuu extends JFrame{
     public int q =0;
     public tracuu(){
@@ -14,9 +12,9 @@ public class tracuu extends JFrame{
         Connection con = db.getConnect();
  Statement stm = con.createStatement();
       String sql = "select * from student  q inner join diemthi k on q.id = k.id and k.id = '"+viewstudent.id+"';"; 
-      System.out.println(sql);
       ResultSet rst =  stm.executeQuery(sql);
       q=0;
+      // nếu có tồn tại học sinh nhận mã sinh vừa nhập thì sẽ nhảy vào while và gán q = 1 , ngược lại q sẽ =0
    while (rst.next()){
  q =1;
 viewstudent.name = rst.getString(2);
@@ -29,6 +27,7 @@ viewstudent.diemtienganh = rst.getString(12);
       
     } 
     if(q==0){
+        // nếu q = 0 sẽ báo lỗi và gán điều hướng rp = 0 để giao diện student không hiển thị ra thông tin;
         viewstudent.dieuhuongrp = 0;
         viewstudent.rp.setVisible(false);
         JOptionPane.showMessageDialog(rootPane, "Chưa có id này trong bảng điểm.","search error",
@@ -45,6 +44,7 @@ viewstudent.diemtienganh = " ";
     }
     else
     viewstudent.dieuhuong = 1;
+    // gán điêu hướng bằng 1 để hiển thị điểm số
     new viewstudent();
     rst.close();
     stm.close();

@@ -20,14 +20,14 @@ public static int selectedrow =0;
         edit = new JButton("sửa");
         edit.addActionListener(this);
       //  Icon icon = new ImageIcon("D:\\doanjavacuoiky1\\login\\src\\icon\\Undo-icon.png");
-        undoo = new JButton("tro lai");
+        undoo = new JButton("trở lại");
      //   undoo.setIcon(icon);
         undoo.addActionListener(this);
         undoo.setBackground(Color.white);
         edit.setBackground(Color.white);
         undoo.setForeground(Color.black);
         edit.setForeground(Color.black);
-        xuat = new JButton("xuat file");
+        xuat = new JButton("xuất file");
         xuat.addActionListener(this);
         xuat.setBackground(Color.white);
         xuat.setForeground(Color.black);
@@ -88,13 +88,13 @@ public static int selectedrow =0;
         if(e.getActionCommand().equals("sửa")){
             Vector st = (Vector)vData.elementAt(selectedrow);
             dieuhuong = 1;
-             new editdiem("chinh sua thong tin hoc sinh",(String)st.elementAt(0), (String)st.elementAt(1),(String)st.elementAt(2) , (String)st.elementAt(3),(String)st.elementAt(4),(String)st.elementAt(5));
+             new editdiem("chỉnh sửa thông tin học sinh",(String)st.elementAt(0), (String)st.elementAt(1),(String)st.elementAt(2) , (String)st.elementAt(3),(String)st.elementAt(4),(String)st.elementAt(5));
             }
         
-        else if(e.getActionCommand().equals("tro lai")){
+        else if(e.getActionCommand().equals("trở lại")){
             this.setVisible(false);
         }
-        else if (e.getActionCommand().equals("xuat file")){
+        else if (e.getActionCommand().equals("xuất file")){
             dieuhuong = 1;
             new nhapnamefile();
             

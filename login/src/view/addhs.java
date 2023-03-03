@@ -53,21 +53,21 @@ addhs.setResizable(false);
 JPanel cont = new JPanel();
 cont.setBackground(new java.awt.Color(185, 245, 245) );
 cont.setLayout(new GridLayout(9,2));
-idhs = new JLabel("ID hoc sinh");
+idhs = new JLabel("ID học sinh");
 idhs.setForeground(Color.black);
 idhstf = new JTextField(id);
 idhstf.setForeground(Color.black);
-if(s.equals("chinh sua thong tin hoc sinh")){
+if(s.equals("chỉnh sửa thông tin học sinh")){
   idhstf.setEditable(false);
 }
 else {
   idhstf.setEditable(true);
 }
-namehs = new JLabel("Ho va ten");
+namehs = new JLabel("Họ và tên");
 namehs.setForeground(Color.black);
  namehstf = new JTextField(ten);
  namehstf.setForeground(Color.black);
- ngaysinh = new JLabel("Ngay sinh");
+ ngaysinh = new JLabel("Ngày sinh");
  ngaysinh.setForeground(Color.black);
  ngaysinhtf = new JDateChooser();
  ngaysinhtf.setForeground(Color.black);
@@ -75,24 +75,24 @@ namehs.setForeground(Color.black);
  ngaysinhtf.setDate(date);
  String [] phong = new String []{"201","202","203","204","205"};
  Double [] dut = new Double []{0.0,0.25,0.5,0.75,1.0,1.25,1.5,1.75,2.0};
-  String [] gt = new String []{"Nam","nu"};
-  gioitinh = new JLabel("Diem uu tien");
+  String [] gt = new String []{"Nam","nữ"};
+  gioitinh = new JLabel("Giới tính");
  gioitinh.setForeground(Color.black);
  gtcb = new JComboBox<>(gt);
  gtcb.setForeground(Color.black);
- uut = new JLabel("Diem uu tien");
+ uut = new JLabel("Điểm ưu tiên");
  uut.setForeground(Color.black);
  uutien = new JComboBox<>(dut);
  uutien.setForeground(Color.black);
- nguv = new JLabel("Phong thi ngu van");
+ nguv = new JLabel("Phòng thi ngữ văn");
  nguv.setForeground(Color.black);
  nguvan = new JComboBox<>(phong);
  nguvan.setForeground(Color.black);
- toanv = new JLabel("Phong thi toan");
+ toanv = new JLabel("Phòng thi toan");
  toanv.setForeground(Color.black);
  toan = new JComboBox<>(phong);
  toan.setForeground(Color.black);
-  tienga = new JLabel("Phong thi tieng anh");
+  tienga = new JLabel("Phòng thi tiếng anh");
   tienga.setForeground(Color.black);
   tienganh = new JComboBox<>(phong);
   tienganh.setForeground(Color.black);
@@ -151,7 +151,7 @@ con.setLayout(new BorderLayout());
 JPanel jp = new JPanel();
 jp.setBackground(new java.awt.Color(185, 245, 245) );
 jp.setLayout(new GridLayout());
-JLabel reg = new JLabel("Thong tin hoc sinh");
+JLabel reg = new JLabel("Thông tin học sinh");
 reg.setFont(new Font("Times New Roman" , Font.BOLD | Font.PLAIN, 24));
 ImageIcon iscon = new ImageIcon("D:\\doanjavacuoiky1\\login\\src\\icon\\Student-3-icon.png");
 JLabel iconreg = new JLabel(iscon);
@@ -176,7 +176,7 @@ addhs.setVisible(true);
         else if(e.getActionCommand().equals("OK")){
             if(idhstf.getText().equals("")||namehstf.getText().equals("")){
               //  new adderror();
-              JOptionPane.showMessageDialog(rootPane, "Thong tin khong duoc rong.","Add Teacher error",
+              JOptionPane.showMessageDialog(rootPane, "Thông tin không được rỗng.","Add Teacher error",
               JOptionPane.ERROR_MESSAGE);
 
             }

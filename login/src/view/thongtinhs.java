@@ -23,8 +23,8 @@ public static String nhapid;
         edit = new JButton("sửa");
         edit.addActionListener(this);
       //  Icon icon = new ImageIcon("D:\\doanjavacuoiky1\\login\\src\\icon\\Undo-icon.png");
-        undoo = new JButton("tro lai");
-        tim = new JButton("tim kiem");
+        undoo = new JButton("trở lại");
+        tim = new JButton("tìm kiếm");
         nhapdiemxettuyen = new JButton("điểm xét");
      //   undoo.setIcon(icon);
         undoo.addActionListener(this);
@@ -33,7 +33,7 @@ public static String nhapid;
         undoo.setForeground(Color.black);
         edit.setForeground(Color.black);
 
-        xuat = new JButton("xuat file");
+        xuat = new JButton("xuất file");
         xuat.addActionListener(this);
         xuat.setBackground(Color.white);
         xuat.setForeground(Color.black);
@@ -104,13 +104,13 @@ public static String nhapid;
         if(e.getActionCommand().equals("sửa")){
             Vector st = (Vector)vData.elementAt(selectedrow);
             dieuhuong = 1;
-             new editdiem("chinh sua thong tin hoc sinh",(String)st.elementAt(0), (String)st.elementAt(1),(String)st.elementAt(2) , (String)st.elementAt(3),(String)st.elementAt(4),(String)st.elementAt(5));
+             new editdiem("chỉnh sửa thông tin học sinh",(String)st.elementAt(0), (String)st.elementAt(1),(String)st.elementAt(2) , (String)st.elementAt(3),(String)st.elementAt(4),(String)st.elementAt(5));
             }
         
-        else if(e.getActionCommand().equals("tro lai")){
+        else if(e.getActionCommand().equals("trở lại")){
             this.setVisible(false);
         }
-        else if (e.getActionCommand().equals("xuat file")){
+        else if (e.getActionCommand().equals("xuất file")){
             if( xettuyen.dieuhuongxettuyen2 ==2){
                 new nhapnamefile2();
             }
@@ -119,7 +119,7 @@ public static String nhapid;
             new nhapnamefile();
             }
         }
-        else if (e.getActionCommand().equals("tim kiem")){
+        else if (e.getActionCommand().equals("tìm kiếm")){
             dieuhuong = 5;
             new nhapidtkhs();
         }

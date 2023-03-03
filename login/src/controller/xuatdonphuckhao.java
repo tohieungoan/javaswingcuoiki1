@@ -11,7 +11,7 @@ public class xuatdonphuckhao extends JFrame {
 		
     try {
         if(phuckhao.chonnguvan.equals("")&&phuckhao.chontoan.equals("")&&phuckhao.chontienganh.equals("")){
-            JOptionPane.showMessageDialog(rootPane, "Ban da phai chon mon de phuc khao.","report error",
+            JOptionPane.showMessageDialog(rootPane, "Bạn cần phải chọn môn để phúc khảo.","report error",
               JOptionPane.ERROR_MESSAGE);
         }
         else {
@@ -30,7 +30,7 @@ public class xuatdonphuckhao extends JFrame {
         }
     } catch (SQLException e) {
         // TODO Auto-generated catch block
-        JOptionPane.showMessageDialog(rootPane, "Ban da phuc khao roi.","report error",
+        JOptionPane.showMessageDialog(rootPane, "Bạn đã phúc khảo rồi.","report error",
               JOptionPane.ERROR_MESSAGE);
         //e.printStackTrace();
     }

@@ -16,7 +16,6 @@ public class logincontroltc extends JFrame {
          while(rs.next()){
          for(int i = 1 ; i<= col_num ; i++)
          tk = rs.getString(i);
-         System.out.println(tk);
           }
          con.close();
          if(tk.equals("1")){

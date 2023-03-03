@@ -10,10 +10,10 @@ public class timphongvipham {
         Connection con = db.getConnect();
  Statement stm = con.createStatement();
  String phongthi;
-if(ghichu.monvp.equals("toan")){
+if(ghichu.monvp.equals("toán")){
     phongthi ="phongthitoan";
 }
-else if(ghichu.monvp.equals("ngu van")){
+else if(ghichu.monvp.equals("ngữ văn")){
 
 phongthi ="phongthinguvan";
 }

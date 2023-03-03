@@ -17,16 +17,17 @@ public class ghichuhs extends JFrame{
     ghichu.ktra = 1;
         ghichu.idhs=rst.getString(1) ;
         ghichu.namehs =rst.getString(2) ;
-        ghichu.namsinhhs=rst.getString(3) ;
-        ghichu.diemuutien=rst.getString(4) ;
-        ghichu.nguvan=rst.getString(5) ;
-        ghichu.toan =rst.getString(6) ;
-        ghichu.tienganh =rst.getString(7) ;
+        ghichu.namsinhhs=rst.getString(4) ;
+        ghichu.diemuutien=rst.getString(5) ;
+        ghichu.nguvan=rst.getString(6) ;
+        ghichu.toan =rst.getString(7) ;
+        ghichu.tienganh =rst.getString(8) ;
     } 
     if(ghichu.ktra==0){
       JOptionPane.showMessageDialog(rootPane, "Không tìm thấy học sinh  !!","search error",
       JOptionPane.ERROR_MESSAGE);
     }
+
     rst.close();
     stm.close();
     con.close();

@@ -40,13 +40,13 @@ public class xuatfile {
             cell = row.createCell(4, CellType.STRING);
             cell.setCellValue("Ngày sinh");
             cell = row.createCell(5, CellType.STRING);
-            cell.setCellValue("Diem uu tien");
+            cell.setCellValue("Điểm ưu tiên");
             cell = row.createCell(6, CellType.STRING);
-            cell.setCellValue("Phong thi ngu van");
+            cell.setCellValue("Phòng thi ngữ văn");
             cell = row.createCell(7, CellType.STRING);
-            cell.setCellValue("Phong thi toan");
+            cell.setCellValue("Phòng thi toán");
             cell = row.createCell(8, CellType.STRING);
-            cell.setCellValue("Phong thi tieng anh");
+            cell.setCellValue("Phòng thi tiếng anh");
          
 new reload2();
 System.out.println(viewAdmin.vData.size());

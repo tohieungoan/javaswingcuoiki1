@@ -25,6 +25,7 @@ public static double duoi15 = 0;
         bieudo.duoi20 = (bieudo.duoi20*100)/(double)bieudo.sodem;
         bieudo.duoi15 = (bieudo.duoi15*100)/(double)bieudo.sodem;
         final JFrame frame = new JFrame("THỐNG KÊ BẢNG ĐIỂM");
+        frame.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\doanjavacuoiky1\\login\\src\\icon\\diagram.png"));
         if(diem30!=0.0){
             dataset.setValue("Điểm tuyệt đối", diem30);
         }

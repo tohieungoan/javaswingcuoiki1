@@ -33,10 +33,11 @@ public class Addteachers extends JFrame implements ActionListener {
     public static String taikhoanv;
     public static String matkhauv;
     private  SimpleDateFormat dcn = new SimpleDateFormat("yyyy-MM-dd");
+    // chỉnh định dạng ngày về giống kiểu date bên sql
         public Addteachers(String ID1 , String ten , String tuoi , String chucvu , 
         String taikhoan , String matkhau ){
             Font font = new Font("Times new Roman", Font.BOLD | Font.PLAIN, 17);
-addtc = new JFrame("Tao tai khoan giao vien");
+addtc = new JFrame("Tạo tài khoản giáo viên");
 addtc.setFont(font);
 // addtc.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\doanjavacuoiky1\\login\\src\\icon\\vku.png"));
 addtc.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -51,37 +52,37 @@ IDgv.setFont(font);
 IDgvtf = new JTextField(ID1);
 cont.add(IDgv);
 cont.add(IDgvtf);
-tengv = new JLabel("Ten");
+tengv = new JLabel("Tên");
 tengv.setFont(font);
 tengvtf = new JTextField(ten);
 cont.add(tengv);
 cont.add(tengvtf);
-namsinhgv = new JLabel("Nam sinh");
+namsinhgv = new JLabel("Năm sinh");
 namsinhgv.setFont(font);
 namsinhgvtf = new JDateChooser();
 java.util.Date date = new java.util.Date();
 namsinhgvtf.setDate(date);
 cont.add(namsinhgv);
 cont.add(namsinhgvtf);
-chucvul = new JLabel("Chuc vu");
+chucvul = new JLabel("Chức vụ");
 chucvul.setFont(font);
-String [] as = new String []{"giao vien coi thi","giao vien cham diem"};
+String [] as = new String []{"giáo viên coi thi","giáo viên chấm điểm"};
 chucvucb = new JComboBox<String>(as);
 chucvucb.setBackground(Color.white);
 chucvucb.setFont(font);
 cont.add(chucvul);
 cont.add(chucvucb);
-taikhoans = new JLabel("Tai khoan");
+taikhoans = new JLabel("Tài khoản");
 taikhoans.setFont(font);
 taikhoantf = new JTextField(taikhoan);
 cont.add(taikhoans);
 cont.add(taikhoantf);
-matkhaus = new JLabel("nhap mat khau");
+matkhaus = new JLabel("nhập mật khẩu");
 cont.add(matkhaus);
 matkhaus.setFont(font);
 matkhautf = new JPasswordField(matkhau);
 cont.add(matkhautf);
-matkhauag = new JLabel("Nhap lai mat khau");
+matkhauag = new JLabel("Nhập lại mật khẩu");
 matkhauag.setFont(font);
 matkhautfag = new JPasswordField(check);
 matkhauag.setForeground(Color.black);
@@ -141,7 +142,7 @@ addtc.setVisible(true);
             if(IDgvtf.getText().equals("")||tengvtf.getText().equals("")||taikhoantf.getText().equals("")||matkhautf.getText().equals("")
             ||dcn.format(namsinhgvtf.getDate()).equals("") ){
        // new adderror();
-       JOptionPane.showMessageDialog(rootPane, "Thong tin khong duoc rong.","Add Teacher error",
+       JOptionPane.showMessageDialog(rootPane, "Thông tin không được rỗng.","Add Teacher error",
        JOptionPane.ERROR_MESSAGE);
                 
             }
@@ -157,7 +158,7 @@ addtc.setVisible(true);
                 addtc.setVisible(false);
             }
             else{
-                JOptionPane.showMessageDialog(rootPane, "2 mat khau khong giong nhau.","password error",
+                JOptionPane.showMessageDialog(rootPane, "2 mật khẩu không giống nhau.","password error",
                 JOptionPane.ERROR_MESSAGE);
             }
         }

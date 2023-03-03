@@ -13,6 +13,7 @@ public class nhapnamefile extends JFrame implements ActionListener {
   public static String namefile = "";
     public nhapnamefile(){
        jf = new JFrame();
+       jf.setResizable(false);
       jf.setLayout(null);
       jf.setUndecorated(true);
 

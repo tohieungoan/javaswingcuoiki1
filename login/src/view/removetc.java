@@ -15,10 +15,10 @@ JButton remove , undoo ;
 public static int selectedrow =0;
     public removetc (){
         JPanel p = new JPanel();
-        remove = new JButton("xoa tk");
+        remove = new JButton("xóa tk");
         remove.addActionListener(this);
       //  Icon icon = new ImageIcon("D:\\doanjavacuoiky1\\login\\src\\icon\\Undo-icon.png");
-        undoo = new JButton("tro lai");
+        undoo = new JButton("trở lại");
      //   undoo.setIcon(icon);
         undoo.addActionListener(this);
         undoo.setBackground(Color.white);
@@ -37,7 +37,7 @@ public static int selectedrow =0;
         tableResult = new JScrollPane(tb);
         this.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
         this.getContentPane().add(tableResult,"North");
-        this.setTitle("xoa tai khoan giao vien");
+        this.setTitle("xóa tài khoản giáo viên");
         this.setSize( 600, 300);
         this.setUndecorated(true);
         this.setLocationRelativeTo(null);
@@ -75,11 +75,11 @@ public static int selectedrow =0;
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
-        if(e.getActionCommand().equals("xoa tk")){
+        if(e.getActionCommand().equals("xóa tk")){
             new deletetc();
             new reload();
         }
-        else if(e.getActionCommand().equals("tro lai")){
+        else if(e.getActionCommand().equals("trở lại")){
             this.setVisible(false);
         }
     }

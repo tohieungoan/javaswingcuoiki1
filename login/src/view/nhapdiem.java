@@ -28,13 +28,13 @@ public nhapdiem(){
     jf = new JFrame();
     jf.setUndecorated(true);
     jf.getRootPane().setWindowDecorationStyle(JRootPane.INFORMATION_DIALOG);
-    id = new JLabel("nhap ID hoc sinh :");
+    id = new JLabel("nhập ID học sinh :");
     idd = new JTextField();
-    nguvan = new JLabel("nhap diem ngu van");
+    nguvan = new JLabel("nhập điểm ngữ văn");
     diemnguvan = new JTextField();
-    toan = new JLabel("nhap diem toan");
+    toan = new JLabel("nhập điểm toán");
     diemtoan = new JTextField();
-    tienganh = new JLabel("nhap diem tieng anh");
+    tienganh = new JLabel("nhập điểm tiếng anh");
     diemtienganh = new JTextField();
     ok = new JButton("OK");
     cancle = new JButton("Cancle");
@@ -50,7 +50,7 @@ public nhapdiem(){
     jf.add(diemtienganh);
     jf.add(ok);
     jf.add(cancle);
-    jf.setTitle("nhap diem hoc sinh");
+    jf.setTitle("nhập điểm học sinh");
     jf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     jf.setLayout(new GridLayout(5,2));
     jf.setSize(300,400);
@@ -67,9 +67,9 @@ public nhapdiem(){
         }
         else {
             try{
-                Double a = Double.parseDouble(diemtoan.getText());
-                Double b = Double.parseDouble(diemtienganh.getText());
-                Double c = Double.parseDouble(diemnguvan.getText());
+                 a = Double.parseDouble(diemtoan.getText());
+                 b = Double.parseDouble(diemtienganh.getText());
+                 c = Double.parseDouble(diemnguvan.getText());
                 
          if(a<0||a>10||b<0||b>10||c<0||c>10){
             JOptionPane.showMessageDialog(rootPane, "điểm nằm ngoài vùng cho phép !!","enter error",

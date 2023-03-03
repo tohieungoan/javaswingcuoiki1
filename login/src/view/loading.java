@@ -1,5 +1,4 @@
 package view;
-
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicProgressBarUI;
 import java.awt.*;
@@ -14,24 +13,30 @@ public class loading extends JFrame {
     BasicProgressBarUI ui = new BasicProgressBarUI() {
         protected Color getSelectionBackground() {
             return Color.black;
+            //khi thanh loading chưa chạy qua chỗ % thì chữ màu đen
         }
         protected Color getSelectionForeground() {
             return Color.red;
+             //khi thanh loading chưa chạy qua chỗ % thì chữ màu đỏ
         }
     };
     public loading (){
         super("ProgressBardemo");
          thi = new JFrame();
          thi.setUndecorated(true);
+         //ẩn nút phóng to thu nhỏ và tắt của jframe
          thi.setSize(600, 400);
          thi.setLocationRelativeTo(null);
+         thi.setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\doanjavacuoiky1\\login\\src\\icon\\vku.jpg"));
        Container panel = new Container();
         panel.setLayout(null);
         progressBar = new JProgressBar(90,100);
         progressBar.setValue(0);
         progressBar.setStringPainted(true);
+        // hiển thị %
         progressBar.setForeground(new java.awt.Color(169, 224, 49));
-        progressBar.setBorderPainted(false);
+        progressBar.setBorderPainted(true);
+        // vẽ đường viền
         progressBar.setBounds(0, 320, 600, 40);
         progressBar.setUI(ui);
         progressBar.setBackground(Color.WHITE);

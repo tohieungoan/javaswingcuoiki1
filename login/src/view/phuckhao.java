@@ -49,7 +49,7 @@ public class phuckhao extends JFrame implements ActionListener {
         nguvan.setBounds(20, 150, 100, 40);
         nguvan.setFont(font);
         cb.setBounds(100, 150, 40, 40);
-        JLabel chon = new JLabel("Chon mon phuc khao");
+        JLabel chon = new JLabel("Chọn môn phúc khảo");
         chon.setFont(new Font("Times new roman", Font.BOLD , 20));
         chon.setBounds(100, 100, 200, 40);
         toan.setFont(font);
@@ -62,7 +62,7 @@ public class phuckhao extends JFrame implements ActionListener {
         noidung.setBounds(150, 250, 100, 40);
         jta.setFont(font);
         jta.setBounds(20, 300, 350, 200);
-        ok = new JButton("OK");
+        ok = new JButton("ok");
         ok.addActionListener(this);
         ok.setBounds(60, 510, 100, 60);
         cancle = new JButton("cancle");
@@ -94,15 +94,15 @@ public class phuckhao extends JFrame implements ActionListener {
         if(e.getActionCommand().equals("cancle")){
             jf.setVisible(false);
         }
-        else if (e.getActionCommand().equals("OK")){
+        else if (e.getActionCommand().equals("ok")){
             if(cb.isSelected()==true){
-               chonnguvan = "ngu van";
+               chonnguvan = "ngữ văn";
             }
             if(cb1.isSelected()==true){
-                chontoan = "toan";
+                chontoan = "toán";
              }
              if(cb2.isSelected()==true){
-                chontienganh = "tieng anh";
+                chontienganh = "tiếng anh";
              }
              if(cb.isSelected()==false){
                 chonnguvan = "";
